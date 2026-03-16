@@ -141,7 +141,7 @@ npm start
 
 Dashboard UI showing task cards with edit and delete functionality.
 
-*(You can add screenshots here later)*
+![Sample Image](https://raw.githubusercontent.com/ssriramcse23-ui/Project-Management/main/Screenshot.png)
 
 ---
 
