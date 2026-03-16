@@ -7,6 +7,14 @@ The project demonstrates **REST API integration, full CRUD operations, and moder
 
 ---
 
+## 🌐 Live Demo
+
+🚀 **Try the Application**
+
+https://mern-stack-wav4.onrender.com/
+
+---
+
 ## 🚀 Features
 
 * Add new tasks with title and description
@@ -22,21 +30,21 @@ The project demonstrates **REST API integration, full CRUD operations, and moder
 
 ## 🛠 Tech Stack
 
-**Frontend**
+### Frontend
 
 * React.js
 * Axios
 * Bootstrap
 * React Icons
 
-**Backend**
+### Backend
 
 * Node.js
 * Express.js
 * MongoDB
 * Mongoose
 
-**Deployment**
+### Deployment
 
 * Render (Backend)
 * GitHub (Version Control)
@@ -141,7 +149,7 @@ npm start
 
 Dashboard UI showing task cards with edit and delete functionality.
 
-![Sample Image](https://raw.githubusercontent.com/ssriramcse23-ui/Project-Management/main/Screenshot.png)
+![Project Dashboard](https://raw.githubusercontent.com/ssriramcse23-ui/Project-Management/main/Screenshot.png)
 
 ---
 
@@ -175,8 +183,5 @@ Frontend can be deployed on:
 
 ## 👨‍💻 Author
 
-Sriram
+**Sriram**
 Aspiring **MERN Stack Developer | Cybersecurity Enthusiast**
-
----
-
