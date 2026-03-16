@@ -3,7 +3,9 @@ import axios from "axios";
 import { FaEdit, FaTrash } from "react-icons/fa";
 
 function App() {
-  const API = "http://localhost:4000/api/tasks";
+
+  // API URL from .env
+  const API = process.env.REACT_APP_API_URL;
 
   const [tasks, setTasks] = useState([]);
   const [title, setTitle] = useState("");
@@ -72,12 +74,14 @@ function App() {
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
+
         <textarea
           className="form-control mb-3 p-3 rounded-3"
           placeholder="Task Description"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         />
+
         <button
           className={`btn ${editId ? "btn-warning" : "btn-primary"} w-100 py-2 fw-bold shadow-sm`}
           onClick={editId ? updateTask : addTask}
@@ -91,25 +95,41 @@ function App() {
         {tasks.map((task) => (
           <div key={task._id} className="col-12 col-sm-6 col-md-4 col-lg-3">
             <div className="card shadow-sm h-100 rounded-4 border-0">
+
               <div className="card-body d-flex flex-column">
-                <h5 className="card-title text-primary fw-bold">{task.title}</h5>
-                <p className="card-text flex-grow-1 text-muted">{task.description}</p>
-                <span className="badge bg-success mb-3 align-self-start">Active</span>
+
+                <h5 className="card-title text-primary fw-bold">
+                  {task.title}
+                </h5>
+
+                <p className="card-text flex-grow-1 text-muted">
+                  {task.description}
+                </p>
+
+                <span className="badge bg-success mb-3 align-self-start">
+                  Active
+                </span>
+
                 <div className="d-flex justify-content-between mt-auto">
+
                   <button
                     className="btn btn-sm btn-outline-warning d-flex align-items-center gap-1"
                     onClick={() => editTask(task)}
                   >
                     <FaEdit /> Edit
                   </button>
+
                   <button
                     className="btn btn-sm btn-outline-danger d-flex align-items-center gap-1"
                     onClick={() => deleteTask(task._id)}
                   >
                     <FaTrash /> Delete
                   </button>
+
                 </div>
+
               </div>
+
             </div>
           </div>
         ))}
@@ -118,3 +138,5 @@ function App() {
     </div>
   );
 }
+
+export default App;
